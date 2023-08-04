@@ -2,3 +2,10 @@
   display: grid;
   grid-template-columns: 20vw 1fr;
 }
+
+#products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 1rem;
+  gap: 1rem;
+}

@@ -8,13 +8,13 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-  <body class="grid">
+  <body class="<%= 'grid' unless request.path == new_user_session_path %>" >
     <% if user_signed_in? %>
       <section class="sidebar">
         <%= render "shared/sidebar" %>
       </section>
     <% end %>
-    <section>
+    <section class="<%= request.path == new_user_session_path ? 'body-session' : 'body' %>">
       <%= yield %>
     </section>
   </body>

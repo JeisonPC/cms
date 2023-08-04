@@ -1,14 +1,17 @@
 Rails.application.routes.draw do
-  devise_for :users do
-    get '/users/sign_out' => 'devise/sessions#destroy'
-  end
+  get 'orders/index'
+  devise_for :users
   resources :products
+  resources :orders
 
   namespace :api do
     resources :products, only: [:index]
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
+  # P
   root "products#index"
+
+  # Wompi
+  post '/webhook', to: 'orders#wompi_webhook'
 end

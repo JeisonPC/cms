@@ -7,4 +7,4 @@ pin "@hotwired/stimulus-loading", to: "stimulus-loading.js", preload: true
 pin_all_from "app/javascript/controllers", under: "controllers"
 
 # Agregar la fuente de Google Fonts al importmap
-pin "@fontsource/poppins", preload: true
+pin '@fontsource/poppins', preload: true

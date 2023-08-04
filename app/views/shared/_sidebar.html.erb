@@ -1,20 +1,23 @@
-<section>
+<section class="sidebar__intern">
   <section>
     <div>
-      <span>Productos</span>
+      <%= link_to products_path do %>
+        Productos
+      <% end %>
     </div>
     <div>
-      <span>Pedidos</span>
-    </div>
-    <div>
-      <% if user_signed_in? %>
-        <%= link_to "Cerrar sesión", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
-      <% else %>
-        <%= link_to 'Iniciar sesión', new_user_session_path %>
+      <%= link_to orders_path do %>
+        Pedidos
       <% end %>
     </div>
   </section>
   <section>
-
+    <div>
+      <% if user_signed_in? %>
+        <%= link_to "Cerrar sesión", destroy_user_session_path, data: {turbo_method: :delete} %>
+      <% else %>
+        <%= link_to 'Iniciar sesión', new_user_session_path %>
+      <% end %>
+    </div>
   </section>
 </section>

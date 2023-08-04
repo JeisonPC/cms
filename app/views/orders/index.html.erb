@@ -1,0 +1,19 @@
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Edad</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.name %></td>
+        <td><%= order.price %></td>
+        <td><%= order.quantity %></td>
+        <td><%= order.paid %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
