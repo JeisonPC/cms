@@ -77,3 +77,5 @@ gem 'sass-rails'
 gem 'normalize-rails'
 
 gem 'rack-cors'
+
+gem "dotenv-rails"
