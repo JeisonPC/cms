@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: cms_production
-  username: cms
-  password: <%= ENV["CMS_DATABASE_PASSWORD"] %>
+  database: <%= ENV["PGDATABASE"] %>
+  username: <%= ENV["PGUSER"] %>
+  password: <%= ENV["PGPASSWORD"] %>
