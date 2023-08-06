@@ -11,9 +11,6 @@ module Cms
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
-    config.hosts << "octopus-solid-silkworm.ngrok-free.app"
-
-
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
@@ -23,7 +20,7 @@ module Cms
     # config.eager_load_paths << Rails.root.join("extras")
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins '*' # O reemplaza '*' con el dominio permitido
+        origins 'railway.app', 'prawie.com' # O reemplaza '*' con el dominio permitido
         resource '*', headers: :any, methods: [:get]
       end
     end
