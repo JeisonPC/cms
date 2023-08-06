@@ -1,0 +1,6 @@
+<!-- app/views/settings/new.html.erb -->
+<h1>Nueva Configuración</h1>
+<%= form_with(model: @setting, url: settings_path, method: :post) do |form| %>
+  <%= render 'form', form: form %>
+  <%= link_to 'Volver', settings_path %>
+<% end %>

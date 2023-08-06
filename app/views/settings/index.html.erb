@@ -1,0 +1,6 @@
+<% if @setting %>
+  ¿Deseas editar el logo?
+  <%= link_to 'Editar Logo', edit_setting_path(@setting) %>
+<% else %>
+  No hay configuración disponible. <%= link_to 'Crear nueva configuración', new_setting_path %>.
+<% end %>

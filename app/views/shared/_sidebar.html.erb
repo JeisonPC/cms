@@ -1,6 +1,14 @@
 <section class="sidebar__intern">
   <section>
     <div>
+      <% if @setting && @setting.logo_id.present? %>
+        <%= image_tag url_for(@setting.logo_id) %>
+      <% else %>
+        <!-- Muestra una imagen predeterminada si no hay logo adjunto -->
+        <%= image_tag 'default_logo.svg' %>
+      <% end %>
+    </div>
+    <div>
       <%= link_to products_path do %>
         Productos
       <% end %>
@@ -12,6 +20,11 @@
     </div>
   </section>
   <section>
+    <div>
+      <%= link_to settings_path do %>
+        Configuración
+      <% end %>
+    </div>
     <div>
       <% if user_signed_in? %>
         <%= link_to "Cerrar sesión", destroy_user_session_path, data: {turbo_method: :delete} %>
