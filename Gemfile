@@ -71,7 +71,7 @@ group :test do
   gem "webdrivers"
 end
 
-gem "pundit"
+#gem "pundit"
 gem 'devise'
 gem 'sass-rails'
 gem 'normalize-rails'
