@@ -79,3 +79,5 @@ gem 'normalize-rails'
 gem 'rack-cors'
 
 gem "dotenv-rails"
+
+gem "cloudinary"
