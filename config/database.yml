@@ -84,4 +84,3 @@ production:
   database: <%= ENV["PGDATABASE"] %>
   username: <%= ENV["PGUSER"] %>
   password: <%= ENV["PGPASSWORD"] %>
-  DATABASE_URL: <%= ENV[‘DATABASE_URL’] %>
