@@ -206,8 +206,6 @@ GEM
       netrc (~> 0.8)
     rexml (3.2.6)
     rubyzip (2.3.2)
-    sass-rails (6.0.0)
-      sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -277,7 +275,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rack-cors
   rails (~> 7.0.6)
-  sass-rails
+  sassc-rails
   selenium-webdriver
   sprockets-rails
   stimulus-rails

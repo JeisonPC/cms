@@ -10,13 +10,21 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
- *= require normalize-rails
  */
 
-body {
-  font-family: "Poppins", sans-serif;
-  background-color: #f8f9fa;
-  overflow: hidden;
+
+@import 'normalize/*';
+
+
+
+@import 'variables/*';
+@import 'components/*';
+@import 'layout/*';
+@import 'pages/*';
+
+
+a {
+  text-decoration: none;
+  color: $azul-principal;
 }

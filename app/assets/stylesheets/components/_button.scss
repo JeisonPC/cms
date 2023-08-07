@@ -1,0 +1,21 @@
+
+.btn {
+  padding: 1rem 2rem;
+
+
+  //Redondeos
+  &--redondeado-semi {
+    border-radius: 0.5rem;
+  }
+  &--redondeado-completo {
+    border-radius: 4rem;
+  }
+
+  //colores
+  &--color-azul {
+    background-color: $azul-principal;
+    border: none;
+    color: white;
+  }
+
+}

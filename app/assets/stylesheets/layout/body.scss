@@ -1,0 +1,15 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: $background;
+  overflow: hidden;
+}
+
+.body-session {
+  display: grid;
+  grid-template-rows: 20vh 1fr;
+
+}
+
+* {
+  box-sizing: border-box;
+}

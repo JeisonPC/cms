@@ -5,13 +5,41 @@
 }
 
 .card-session {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  width: 80vw;
-  height: 80vh;
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  justify-content: center;
   background-color: white;
+  width: 100vw;
+  height: 100vh;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 40px 40px 0px 0px;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+  & button {
+    width: 100%;
+  }
+  & input {
+    width: 100%;
+  }
+}
+
+
+@media (min-width: 480px) {
+  .card-session {
+    background-color: red;
+  }
+}
+
+/* Most tablets (min-width: 768px) */
+@media (min-width: 768px) {
+  /* Tus estilos para la mayoría de las tabletas */
+}
+
+/* Smaller desktop viewpoints (min-width: 992px) */
+@media (min-width: 992px) {
+  /* Tus estilos para pantallas de escritorio más pequeñas */
+}
+
+/* Large devices and wide screens (min-width: 1200px) */
+@media (min-width: 1200px) {
+  /* Tus estilos para dispositivos grandes y pantallas anchas */
 }
