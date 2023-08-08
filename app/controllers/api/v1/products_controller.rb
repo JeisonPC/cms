@@ -8,7 +8,12 @@ module Api
 
       def index
         @products = Product.all
-        render json: @products
+        render json: @products.to_json(include: { photos: { methods: :url } })
+      end
+
+      def show
+        @product = Product.find(params[:id])
+        render json: @product.to_json(include: { photos: { methods: :url } })
       end
     end
   end

@@ -1,5 +1,3 @@
 class Setting < ApplicationRecord
-  def logo_url
-    logo.attached? ? url_for(logo) : '/assets/default_logo.svg'
-  end
+  has_one_attached :logo
 end

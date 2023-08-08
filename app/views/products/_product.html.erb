@@ -11,5 +11,14 @@
     <h3>Cantidad:</h3>
     <%= product.quantity %>
   </div>
+  <div>
+    <% if product.photos.any? %>
+      <% product.photos.each do |photo| %>
+        <%= cl_image_tag photo.key, height: 100, width: 100, crop: :fill %>
+      <% end %>
+    <% else %>
+      <%= image_tag 'product-default-image.png', height: 100, width: 100 %>
+    <% end %>
+  </div>
   <%= link_to "Más info", product %>
 </div>

@@ -1,5 +1,5 @@
 <section class="logo-session">
-  <% if @setting && @setting.logo_id.present? %>
+  <% if @setting && @setting.logo.present? %>
     <%= image_tag url_for(@setting.logo_id) %>
   <% else %>
     <!-- Muestra una imagen predeterminada si no hay logo adjunto -->
@@ -19,7 +19,6 @@
     </div>
     <% if devise_mapping.rememberable? %>
       <div class="field field--checkbox">
-        <%= f.check_box :remember_me %>
         <%= f.label :remember_me, "¿Recordar tus datos?" %>
       </div>
     <% end %>

@@ -1,7 +1,7 @@
 <h1>Configuración</h1>
 
 <% if @setting.logo.attached? %>
-  <%= image_tag @setting.logo %>
+  <%= image_tag @setting.logo, style:"width: 100%" %>
 <% else %>
   <!-- Muestra una imagen predeterminada si no hay logo adjunto -->
   LOGO

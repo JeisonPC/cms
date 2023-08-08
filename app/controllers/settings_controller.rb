@@ -13,6 +13,18 @@ class SettingsController < ApplicationController
     @setting = Setting.find(params[:id])
   end
 
+  def create
+    @setting = Setting.new(setting_params)
+
+    respond_to do |format|
+      if @setting.save
+        format.html { redirect_to setting_url(@setting), notice: "Setting was successfully created." }
+      else
+        format.html { render :new, status: :unprocessable_entity }
+      end
+    end
+  end
+
   def show
     @setting = Setting.last
   end
