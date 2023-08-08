@@ -1,6 +1,5 @@
 # app/controllers/settings_controller.rb
 class SettingsController < ApplicationController
-
   def index
     @setting = Setting.last
   end
@@ -18,7 +17,7 @@ class SettingsController < ApplicationController
 
     respond_to do |format|
       if @setting.save
-        format.html { redirect_to setting_url(@setting), notice: "Setting was successfully created." }
+        format.html { redirect_to setting_url(@setting), notice: 'Setting was successfully created.' }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
@@ -41,6 +40,6 @@ class SettingsController < ApplicationController
   private
 
   def setting_params
-    params.require(:setting).permit(:site_name, :logo)
+    params.require(:setting).permit(:site_name, :logo, :favicon)
   end
 end
