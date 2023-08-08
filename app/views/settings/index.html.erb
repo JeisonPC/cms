@@ -1,6 +1,6 @@
 <% if @setting %>
   ¿Deseas editar el logo?
-  <%= image_tag @setting.logo, style:"width: 100%" %>
+  <%= image_tag @setting.logo, style:"width: 100px" %>
   <%= link_to 'Editar Logo', edit_setting_path(@setting) %>
 <% else %>
   No hay configuración disponible. <%= link_to 'Crear nueva configuración', new_setting_path %>.

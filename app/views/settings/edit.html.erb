@@ -1,8 +1,6 @@
 <!-- app/views/settings/edit.html.erb -->
 <h1>Editar Configuración</h1>
-
-<%= render 'form' %>
-
-
-
+<%= form_with(model: @setting) do |form| %>
+  <%= render 'form', form: form %>
+<% end %>
 <%= link_to 'Volver', @setting %>
